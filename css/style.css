@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Roboto-Bold';
     src: url(../font/roboto/Roboto-Bold.ttf);
 }
@@ -23,15 +23,20 @@
     font-family: 'Roborto-Thin';
     src: url(../font/roboto/Roboto-Thin.ttf);
 }
-
+ */
 
 * {
-    font-family: 'Roboto-Thin';
+    /* font-family: 'Roboto-Thin'; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* border: 3px solid red; */
     margin: 0px;
     list-style: none;
     max-width: 100%;
 }
+
+
+
+/* Styling for content of site - above is sitewide config */
 
 .body {
     display: flex;
@@ -41,15 +46,31 @@
     gap: 30px;
 }
 
+/* Styling for Header */
+
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #1F2936;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 8vh;
+    color: #F9FAF8;
+    position: fixed;
+    margin: auto;
+    width: 100%;
+}
+
+/* Styling for upper segment */
+
 .container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    /* padding: 10%; */
     padding-top: 10%;
     padding-bottom: 10%;
-    background-color: darkblue;
+    background-color: #1F2936;
     width: 100vw;
     gap: 2vw;
 }
@@ -60,67 +81,143 @@
     justify-content: center;
     align-items: flex-start;
     max-width: 30vw;
-    color: white;
+    color: #F9FAF8;
 }
 
 .top-img {
     min-width: 30vw;
     max-width: 30vw;
-    height: 13rem;
+    height: 30vh;
 
+}
+
+
+.upperbutton {
+    background-color: #3882F6;
+    color:white;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: .5vw;
+    padding-bottom: .5vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    border: 0px;
+    margin-top: 15px;
+}
+
+
+/* Styling for second part */
+
+.primary-sec-container {
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .container-sec {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     gap: 2vw;
+    margin-top: 5vh;
     text-align: center;
 
 }
 
-.container-third {
-    display: flex;
-    padding: 5vw;
-    background-color: lightgray;
-    min-width: 88vw;
-    min-height: 30vh;
-    max-height: 30vh;
-    font-size: 35px;
-    justify-content: center;
-    align-items: center;
+.second-img {
+    width: 15vw;
+    border: 3px solid #3882F6;
+    border-radius: 10%;
+}
+
+#but-again {
+    width: 325px;
 }
 
 
+/* Third part of site or w/e */
+
+
+.container-third {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 5vw;
+    background-color: #E5E7EB;
+    color: #1F2937;
+    min-width: 88vw;
+    min-height: 30vh;
+    max-height: 30vh;
+    font-size: 2.3vw;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.thirdchild {
+    padding-left: 20vw;
+    padding-right: 20vw;
+    color: #1F2937;
+    flex-wrap: wrap;
+}
+
+
+/* Fourth part of site */
 
 .container-fourth {
     display: flex;
     justify-content: space-evenly;
-    align-content: center;
+    align-items: center;
     padding: auto;
-    margin-left: 25vw;
-    margin-right: 25vw;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
     padding: 50px;
     min-width: 60vw;
-    background-color: lightblue;
+    background-color: #3882F6;
+    color: #E5E7EB;
+    border-radius: 10px;
 }
 
-.primary-sec-container {
+
+.lowerbutton {
+    display: inline-block;
+    background-color: #3882F6;
+    border:2px solid #F9FAF8;
+    color:#F9FAF8;
+    border-radius: 15%;
+    padding-left: 1.25vw;
+    padding-right: 1.25vw;
+    height: 2.25rem;
     text-align: center;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.header {
+
+/* Footer */
+
+.footer {
     display: flex;
-    flex-flow: row nowrap;
-    background-color: grey;
-    justify-content: space-between;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: #1F2936;
+    justify-content: center;
     align-items: center;
-    padding-left: 20vw;
-    padding-right: 20vw;
-    min-height: 8vh;
+    color: #F9FAF8;
+}
+
+
+
+
+/* Misc specific changes - may be bad practice */
+/* Would inline CSS be better here, or is that ALWAYS bad practice? */
+li {
+    color: #E5E7EB;
+    font-size: 18px;
 }
 
 ul {
@@ -129,18 +226,20 @@ ul {
     gap: 3vw;
 }
 
-.second-img {
-    width: 15vw;
-    border: 3px solid lightblue;
+#randominfo {
+    font-size: 36px;
 }
 
-.footer {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 3vh;
-    background-color: gainsboro;
-    justify-content: center;
-    align-items: center;
+#name-logo {
+    font-size: 24px;
 }
+
+h1 {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+h2 {
+    color: #F9FAF8;
+}
+
